@@ -1,0 +1,673 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: monospace;
+    letter-spacing: 0.2vw;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+#loadcover{
+    background-color:#0a192f;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+#load{
+    background: url("./components/preloader.gif") no-repeat;
+    background-size: cover;
+    width: 30vw;
+    height: 30vh
+
+   
+
+}
+@mixin flex($space){
+    display: flex;
+    flex-direction: column;
+    gap: $space;
+}
+@mixin  ptagvalues {
+    color: rgb(161, 158, 158);
+    letter-spacing: 0.1vw;
+    font-size: 1.1vw;
+}
+
+.whole{
+  background-color: #0a192f;
+    // background: url("./components/backgrnd.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+ overflow: hidden;
+ width: auto;
+    height: 350vh;
+    .port_contents{
+        @include flex(2vh);
+        color: rgb(161, 153, 153);
+     
+        position: absolute;     
+        left: 80vw;
+        top: 8vh;
+        span:hover{
+            font-weight: 700;
+            cursor: pointer;
+            color: white
+        }
+    }
+    .port_name{
+        @include flex(1vh);
+        color: white;
+        font-size: 7vw;
+        position: absolute;
+        top: 17vh;
+        left: 8vw;
+        span{
+            letter-spacing: 2vw;
+        }
+        
+        
+    }
+}
+.taught{
+    position: fixed;
+    right: 0%;
+    width: 7vw;
+    height: 100vh;
+
+}
+.crcle{
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-top: 7vh;
+    margin-left: 5vw;opacity: 0;
+}
+.slantline{
+    height: 6vh;
+    margin-left: 4vw;
+    margin-top: -1.2vh;
+    transform: rotate(45deg);
+    border: 1px solid black;
+    width: 0%;opacity: 0;
+}
+.scndsrc
+{
+    margin-left: 2.26vw;
+    margin-top: -1.1vh;opacity: 1;
+}
+.lngline{
+    height: 70vh;
+    border: 1px solid black;
+    width: 0%;
+    margin-left: 2.6vw;
+}
+.frntart{
+  opacity: 0.2;
+   transform: rotate(90deg);
+    width: 30vh;
+    margin-top: -20vh;
+    margin-left: -3vw;
+    font-size: large;
+    color: rgb(241, 229, 161);
+   
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.initials{
+    color:#3a547c;
+}
+.port_frontend{
+    position: absolute;
+    top: 53vh;
+    left: 37vw;
+    span{
+        color: white;
+        font-size: x-large;
+        letter-spacing: normal;
+        
+    }
+    .frstptag{
+        margin-top: 2vh;
+    }
+    p{
+      @include ptagvalues;
+    }
+    .port_zero{
+        color: rgb(133, 130, 130);
+        font-size: 5vw;
+        letter-spacing: normal;
+        position: absolute;
+        opacity: 0.2;
+        top: -13vh;
+    }
+}
+.port_skills{
+    position: absolute;
+    padding-top: 10vh;
+    top: 90vh;
+    left: 8vw;
+}
+.skills{
+    color: white;
+    font-size: 3vw;
+    margin-left: 1vw;
+   
+}
+.num_one{
+    color: rgb(133, 130, 130);
+    font-size: 5vw;
+    opacity: 0.4;
+}
+.skill_ptag{
+    @include ptagvalues;
+    margin-left: 7vw;
+}
+.skill_list{
+    @include flex(0.8vh);
+    @include ptagvalues;
+    margin-left: 40vw;
+    margin-top: -11vh;
+}
+.port_experience{
+    position: absolute;
+    padding-top: 10vh;
+    top: 155vh;
+    .port_number_part{
+        margin-left: 8vw;
+    }
+    
+}
+.company{
+    display: flex;
+    
+    margin-left: 15vw;
+    gap: 23vw;
+    @include ptagvalues;
+ }
+.exp_clmn{
+    display: flex;
+    flex-direction: column;
+}
+.port_education{
+    position: absolute;
+   
+    padding-top: 10vh;
+    top: 210vh;
+    .port_number_part{
+        margin-left: 8vw;
+    }
+    .company{
+        gap: 9vw;
+    }
+   
+}
+.ecpart{
+    @include flex(1vh);
+  
+}
+.port_contact{
+    position: absolute;
+    padding-top: 10vh;
+    top: 260vh;
+    table {
+        border-collapse: separate;
+        border-spacing: 0 20px;
+      }
+    .port_number_part{
+        margin-left: 8vw;
+    }
+    .company{
+        gap: 4vw;
+       
+    }
+    .trtop{
+       th{
+           text-align: left;
+           font-weight: 100;
+           
+       }
+    }
+}
+.contact_options{
+    cursor: pointer;
+    &:hover{
+        font-weight: 700;
+        color: white;
+    }
+}
+.bouncing-text {
+    position: relative;
+    display: flex;
+    font-size: XX-large;
+    font-family: arial black;  
+  }
+  .d, .e, .v, .ee, .l, .o ,.p , .eee ,.r {
+    color: #4cc9f0;
+    // text-shadow: 0 3px #4361ee, 0 5px #4361ee, 0 7px #4361ee;
+  }
+  @keyframes bounce {
+    0%   { transform: scale(1,1) translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-22px);}
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    58%  { transform: scale(1,1) translateY(-4px); }
+    65%  { transform: scale(1,1) translateY(0);}
+    100% { transform: scale(1,1) translateY(0);}
+}
+
+.d {
+animation: bounce 1.5s ease infinite;
+}
+
+.e {
+animation: bounce 1.5s ease infinite .1s;
+}
+
+.v {
+animation: bounce 1.5s ease infinite .2s;
+}
+
+.ee {
+animation: bounce 1.5s ease infinite .3s;
+}
+
+.l {
+animation: bounce 1.5s ease infinite .4s;
+}
+
+.o {
+animation: bounce 1.5s ease infinite .5s;
+}
+.p {
+    animation: bounce 1.5s ease infinite .6s;
+    }
+    .eee {
+        animation: bounce 1.5s ease infinite .7s;
+        }
+        .r {
+            animation: bounce 1.5s ease infinite .8s;
+            }
+.wrappers{
+    display: flex;
+    .developer{
+        font-size: xx-large;
+        letter-spacing: 0.4vw;
+    }
+}
+.txtd{
+    color: white;
+        font-size: x-large;
+        letter-spacing: normal; opacity: 0;
+}
+.txtd,.zipper{
+    position: absolute;
+}
+.zipper{
+    color: white;
+    font-size: x-large;
+    letter-spacing: normal;
+   
+}
+
+
+
+.developer{
+    font-size: 5vw;
+    color: red;
+}
+.mailid{
+    user-select: text;
+
+    padding: 1vw;
+    padding-right: 2vw;
+    opacity: 0;
+}
+.mail:hover{
+    .mailid{
+        opacity: 1;
+    }
+}
+.letter_a{
+  
+	font-weight: 700;
+	background-clip: text;
+	-webkit-background-clip: text;color: transparent;
+    background-image: url('https://media.gettyimages.com/photos/sandblasted-glass-with-geometric-pattern-backlit-picture-id1312098715?s=612x612');
+background-position: bottom; 
+	  
+}
+.port_name:hover .letter_a{
+    color: white;
+}
+@media only screen and (min-width: 1224px) {
+    .frntart{
+        margin-left: -2.5vw;
+        position: fixed;
+    
+    }
+    .port_frontend{
+        top: 50vh;
+        p{
+            font-size: 1.3vw;
+        }
+    }
+    .skill_list{
+        margin-left: 45vw;
+    }
+    .skill_list,.skill_ptag,.company{
+       
+            font-size: 1.3vw;
+        
+    }
+    .company{
+        gap: 15vw;
+    }
+}
+
+@media only screen and (max-width: 1224px) {
+    .port_frontend{
+        top: 50vh;
+        p{
+            font-size: 1.3vw;
+        }
+    }
+    .skill_list{
+        margin-left: 45vw;
+    }
+    .skill_list,.skill_ptag,.company{
+       
+            font-size: 1.3vw;
+        
+    }
+    .company{
+        gap: 15vw;
+    }
+}
+
+@media only screen and (max-width: 1072px) {
+  
+    .frntart{
+    margin-left: -4.5vw;
+    }
+    .scndsrc{
+        margin-left: 2.1vw;
+    }
+    .whole{
+        .port_name{
+            font-size: 9vw;
+      }
+    }
+    .port_frontend{
+        top: 50vh;
+        p{
+            font-size: 1.5vw;
+        }
+        .port_zero{
+            top: -10vh;
+        }
+    }
+    .skill_list{
+        margin-left: 50vw;
+    }
+    .skill_list,.skill_ptag,.company{
+       
+        font-size: 1.5vw;
+    
+}
+.skills{
+    font-size: 3.5vw;
+   
+}
+.num_one{
+
+    font-size: 5.5vw;
+}
+.port_skills{
+    top: 85vh;
+  
+}
+.port_experience{
+    top: 150vh;
+}
+.company{
+    gap: 10vw;
+}
+.port_education{
+    .company{
+        gap: 6vw;
+    }
+}
+.port_education{
+    top: 210vh;
+}
+.port_contact{
+    top: 260vh;
+}
+}
+  @media only screen and (max-width: 970px) {
+    .frntart{
+    margin-left: -5.5vw;
+    }
+    .whole{
+    .port_contents{
+        left: 70vw;
+    }
+   
+        .port_name{
+            font-size: 11vw;
+      }
+    
+}
+.port_frontend{
+   
+    top: 54vh;
+   
+   
+    .frstptag{
+        margin-top: 2vh;
+    }
+    p{
+      font-size: 1.5vw;
+    }
+    .port_zero{
+       
+        top: -9vh;
+    }
+}
+  }
+ 
+  @media only screen and (max-width: 816px) {
+    .frntart{
+        margin-left: -6.8vw;
+        }
+        .port_frontend{
+            top: 50vh;
+            p{
+                font-size: 1.7vw;
+            }
+            .port_zero{
+
+            }
+        }
+        .skill_list{
+            margin-left: 60vw;
+        }
+        .skill_list,.skill_ptag,.company{
+       
+            font-size: 1.7vw;
+        
+    }
+  }
+
+  @media only screen and (max-width: 770px) {
+      .taught{
+          right: 3vw;
+      }
+    .frntart{
+        margin-left: -7vw;
+        }
+        .scndsrc{
+            margin-left: 1.9vw;
+        }
+        .port_frontend{
+            top: 48vh;
+            p{
+                font-size: 1.9vw;
+            }
+            .frstptag{
+                margin-top: 1vh;
+            }
+            .port_zero{
+font-size: 7vw;
+            }
+        }
+        .skill_list{
+            margin-left: 65vw;
+        }
+        .skill_list,.skill_ptag,.company{
+       
+            font-size: 1.9vw;
+        
+    }
+    .skills{
+        font-size: 4vw;
+       
+    }
+    .num_one{
+    
+        font-size: 6vw;
+    }
+    .company{
+        gap: 5vw;
+        flex-wrap: wrap-reverse;
+    }
+    .port_experience{
+        top: 135vh;
+    }
+    .port_education{
+        top: 200vh;
+    }
+    .port_contact{
+        top: 270vh;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    .whole{
+        .port_contents{
+            left: 65vw;
+        }
+    }
+    .taught{
+        right: 3vw;
+    }
+  .frntart{
+      margin-left: -9vw;
+      }
+      .port_frontend{
+        top: 42vh;
+        left: 31vw;
+        p{
+            font-size: 2vw;
+        }
+        .frstptag{
+            margin-top: 1vh;
+        }
+        .port_zero{
+top: -7vh;
+        }
+    }
+    .skill_list,.skill_ptag,.company{
+       
+        font-size: 2vw;
+    
+}
+.port_skills{
+    top: 70vh;
+  
+}
+.port_experience{
+    top: 115vh;
+}
+.port_education{
+    top: 170vh;
+}
+.port_contact{
+    top: 220vh;
+}
+}
+
+@media  screen and (max-width : 600px) {
+    .port_frontend{
+        top: 58vh;
+        left: 11vw;
+        p{
+            font-size: 2.4vw;
+        }
+        .frstptag{
+            margin-top: 1vh;
+        }
+        .port_zero{
+top: -7vh;
+        }
+    }
+    .skill_list,.skill_ptag,.company{
+       
+        font-size: 2.4vw;
+    
+}
+.company{
+    font-size: 2vw;
+}
+.skills{
+    font-size: 5vw;
+   
+}
+.num_one{
+
+    font-size: 7vw;
+}
+.port_skills{
+    top: 85vh;
+  
+}
+.port_experience{
+    top: 135vh;
+}
+.port_education{
+    top: 195vh;
+}
+.port_contact{
+    top: 255vh;
+}
+}
+
+@media only screen and (max-width: 550px) {
+    .taught{
+        right: 3vw;
+    }
+  .frntart{
+      margin-left: -11.5vw;
+      }
+      .scndsrc{
+        margin-left: 1.6vw;
+       
+    }
+    .company{
+        font-size: 2.5vw;
+    }
+
+    
+}
+@media screen and (max-width: 389px) {
+    .frntart{
+        display: none;
+    }
+    .taught{
+        display: none;
+    }
+    
+}
