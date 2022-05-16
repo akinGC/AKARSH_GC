@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/AKARSH_GC/static/css/main.c52d73d6.css",
-    "main.js": "/AKARSH_GC/static/js/main.5b55d063.js",
+    "main.css": "/AKARSH_GC/static/css/main.b1d0b43b.css",
+    "main.js": "/AKARSH_GC/static/js/main.1efade78.js",
     "static/js/787.ad15757c.chunk.js": "/AKARSH_GC/static/js/787.ad15757c.chunk.js",
     "static/media/preloader.gif": "/AKARSH_GC/static/media/preloader.e55a1721e7a1c21a0a8d.gif",
     "index.html": "/AKARSH_GC/index.html",
-    "main.c52d73d6.css.map": "/AKARSH_GC/static/css/main.c52d73d6.css.map",
-    "main.5b55d063.js.map": "/AKARSH_GC/static/js/main.5b55d063.js.map",
+    "main.b1d0b43b.css.map": "/AKARSH_GC/static/css/main.b1d0b43b.css.map",
+    "main.1efade78.js.map": "/AKARSH_GC/static/js/main.1efade78.js.map",
     "787.ad15757c.chunk.js.map": "/AKARSH_GC/static/js/787.ad15757c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c52d73d6.css",
-    "static/js/main.5b55d063.js"
+    "static/css/main.b1d0b43b.css",
+    "static/js/main.1efade78.js"
   ]
 }
