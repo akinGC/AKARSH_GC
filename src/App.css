@@ -761,12 +761,34 @@
   }
 }
 
-@media screen and (max-width: 389px) {
+@media screen and (max-width: 480px) {
   .frntart {
     display: none;
   }
   .taught {
     display: none;
+  }
+  .port_skills {
+    top: 75vh;
+  }
+  .port_experience {
+    top: 125vh;
+  }
+  .port_education {
+    top: 165vh;
+  }
+  .port_contact {
+    top: 205vh;
+  }
+  p {
+    font-size: 2.7vw;
+  }
+  .skill_list {
+    margin-left: 7vw;
+    margin-top: 5vh;
+  }
+  .whole {
+    height: 253vh;
   }
 }
 /*# sourceMappingURL=App.css.map */
