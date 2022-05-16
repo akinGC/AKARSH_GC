@@ -41,7 +41,7 @@ function App() {
           <div className="frntart">frontend Artist</div>
         </div>
        <div >
-       <FontAwesomeIcon id='menu_icon'className="menu_icon"onClick={()=>{
+       <FontAwesomeIcon  id='menu_icon'className="menu_icon"onClick={()=>{
           const target = document.getElementById('port_contents');
           target.style.height='initial';
           document.getElementById('menu_icon').style.display='none';
@@ -55,10 +55,10 @@ function App() {
        </div>
        <div className='port_contents' id='port_contents'>
         
-          <span onClick={scrollToSkill}>01 SKILLS</span>
-          <span onClick={scrollToExp}>02 EXPERIENCE</span>
-          <span onClick={scrollToEdu}>03 EDUCATION</span>
-          <span onClick={scrollToCnt}>04 CONTACT</span>
+          <span onClick={scrollToSkill}><span className="numbers">01</span><span className="zing"></span> SKILLS</span>
+          <span onClick={scrollToExp}><span className="numbers">02</span> EXPERIENCE</span>
+          <span onClick={scrollToEdu}><span className="numbers">03</span> EDUCATION</span>
+          <span onClick={scrollToCnt}><span className="numbers">04</span> CONTACT</span>
         </div>
         <div className='port_name'><span className="letter_a">AKARSH</span>
           <span className="initials">GC</span>
@@ -112,7 +112,7 @@ e.target.style.backgroundColor='red'
           <div className='company'>
             <span className='exp_clmn'> <span className='cmpny_name'>Infosys LTD</span>
               <span>2021-present</span></span>
-            <span>Completed Infosys certified React JS Developer <p>training where i built components for web-Applications</p><p ref={testRef}  >that are efficient, Re-usable
+            <span>Completed Infosys certified React JS Developer <p ref={testRef}>training where i built components for web-Applications</p><p   >that are efficient, Re-usable
               and Responsive</p></span>
           </div>
 
@@ -138,7 +138,7 @@ e.target.style.backgroundColor='red'
             <span className='skills'>CONTACT</span>
           </div>
           <div className='company'>
-            <span className='exp_clmn'> <span className='cmpny_name'>Please feel free to contact on any of<p> these platforms</p></span>
+            <span className='exp_clmnc'> <span className='cmpny_name'>Please feel free to contact on any of<p> these platforms</p></span>
             </span>
             <span className='ecpart'>
               <table>
