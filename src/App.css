@@ -84,6 +84,26 @@
   letter-spacing: 2vw;
 }
 
+.menu_icon, .menu_cross {
+  width: 5vw;
+  position: absolute;
+  right: 4vw;
+  cursor: pointer;
+  top: 2vh;
+  color: white;
+  height: 5vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: none;
+}
+
+.menu_icon {
+  z-index: 1;
+  background-color: #0a192f;
+}
+
 .taught {
   position: fixed;
   right: 0%;
@@ -772,13 +792,13 @@
     top: 75vh;
   }
   .port_experience {
-    top: 125vh;
+    top: 120vh;
   }
   .port_education {
-    top: 165vh;
+    top: 150vh;
   }
   .port_contact {
-    top: 205vh;
+    top: 180vh;
   }
   p {
     font-size: 2.7vw;
@@ -788,7 +808,22 @@
     margin-top: 5vh;
   }
   .whole {
-    height: 253vh;
+    height: 252vh;
+  }
+  .port_contents {
+    height: 0%;
+    overflow: hidden;
+    -webkit-transition: height 2s;
+    transition: height 2s;
+  }
+  .menu_icon, .menu_cross {
+    display: block;
+  }
+  .whole .port_name {
+    top: 12vh;
+  }
+  .port_frontend {
+    top: 49vh;
   }
 }
 /*# sourceMappingURL=App.css.map */

@@ -3,6 +3,7 @@ import "./App.css";
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import {faBars,faXmark} from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -18,14 +19,15 @@ function App() {
   const SkilRef = useRef(null);
   const ExpRef = useRef(null);
   const cntRef = useRef(null);
-  const scrollToEdu = () => testRef.current.scrollIntoView();
+  const scrollToEdu = () => {testRef.current.scrollIntoView();
+  };
   const scrollToSkill = () => SkilRef.current.scrollIntoView();
   const scrollToExp = () => ExpRef.current.scrollIntoView();
   const scrollToCnt = () => cntRef.current.scrollIntoView();
   
  
   return (
-    <Fragment>
+ <Fragment>
      <div id="loadcover"> <div id="load"></div></div>
       
         <div className='whole'id="whole" onLoad={()=>{
@@ -38,7 +40,21 @@ function App() {
           <div className="lngline"></div>
           <div className="frntart">frontend Artist</div>
         </div>
-       <div className='port_contents'>
+       <div >
+       <FontAwesomeIcon id='menu_icon'className="menu_icon"onClick={()=>{
+          const target = document.getElementById('port_contents');
+          target.style.height='initial';
+          document.getElementById('menu_icon').style.display='none';
+
+        }} icon={faBars}></FontAwesomeIcon>
+      <FontAwesomeIcon className="menu_cross"onClick={()=>{
+        document.getElementById('menu_icon').style.display='block';
+        const target = document.getElementById('port_contents');
+          target.style.height='0%';
+      }} icon={faXmark}></FontAwesomeIcon>
+       </div>
+       <div className='port_contents' id='port_contents'>
+        
           <span onClick={scrollToSkill}>01 SKILLS</span>
           <span onClick={scrollToExp}>02 EXPERIENCE</span>
           <span onClick={scrollToEdu}>03 EDUCATION</span>
@@ -86,7 +102,9 @@ function App() {
           </div>
 
         </div>
-        <div className='port_experience' data-aos="slide-up">
+        <div className='port_experience' data-aos="slide-up" onFocus={(e)=>{
+e.target.style.backgroundColor='red'
+        }}>
           <div className='port_number_part'>
             <span className='num_one'>02</span>
             <span className='skills'>EXPERIENCE</span>
@@ -112,6 +130,7 @@ function App() {
           </div>
 
         </div>
+        
 
         <div className='port_contact' ref={cntRef} data-aos="slide-up">
           <div className='port_number_part'>
@@ -133,11 +152,13 @@ function App() {
           </div>
 
         </div>
+       
+       
 <div id="ifram"><iframe width="560" height="315" src="https://www.youtube.com/embed/lYLlFCWexK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
       </div>
 
-    </Fragment>
+   </Fragment>
 
   );
 }
