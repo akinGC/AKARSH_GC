@@ -58,7 +58,7 @@ function App() {
           <span onClick={scrollToSkill}><span className="numbers">01</span><span className="zing"></span> SKILLS</span>
           <span onClick={scrollToExp}><span className="numbers">02</span> EXPERIENCE</span>
           <span onClick={scrollToEdu}><span className="numbers">03</span> EDUCATION</span>
-          <span onClick={scrollToCnt}><span className="numbers">04</span> CONTACT</span>
+          <span onClick={scrollToCnt}><span className="numbers">04</span> MEET</span>
         </div>
         <div className='port_name'><span className="letter_a">AKARSH</span>
           <span className="initials">GC</span>
@@ -126,7 +126,7 @@ e.target.style.backgroundColor='red'
           <div className='company'>
             <span className='exp_clmn'> <span className='cmpny_name'>Vidya Vikas engineering college<p></p></span>
               <span>2016-2020</span></span>
-            <span className='ecpart'><span ref={cntRef}>Electronics & Communication engineering</span>CGPA - 7.6</span>
+            <span className='ecpart'><span ref={cntRef}>Electronics & Communication<p>engineering</p> </span>CGPA - 7.6</span>
           </div>
 
         </div>
@@ -135,7 +135,7 @@ e.target.style.backgroundColor='red'
         <div className='port_contact' ref={cntRef} data-aos="slide-up">
           <div className='port_number_part'>
             <span className='num_one'>04</span>
-            <span className='skills'>CONTACT</span>
+            <span className='skills'>MEET</span>
           </div>
           <div className='company'>
             <span className='exp_clmnc'> <span className='cmpny_name'>Please feel free to contact on any of<p> these platforms</p></span>
