@@ -77,7 +77,7 @@ function App() {
   <div class="eee">E</div>
   <div class="r">R</div>
   <div class="shadow"></div>
-  <div class="shadow-two"></div>opportunity
+  <div class="shadow-two"></div>
 </div>
           <p className='frstptag'>Desire a Developer position where<p> my skills will be used to full </p>
             <p>seek a Dynamic and productive environment </p><p ref={SkilRef} >with opportunity to learn new skills</p> </p>
