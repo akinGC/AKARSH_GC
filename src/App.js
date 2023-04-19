@@ -65,7 +65,8 @@ function App() {
         </div>
         <div className='port_frontend'>
           <span className='port_zero'>00</span>
-          <div class="bouncing-text">
+          <div class="bouncing-text"> 
+          {/* developer animation */}
             <span>I'm a Front-End&nbsp;</span>
   <div class="d">D</div>
   <div class="e">E</div>
