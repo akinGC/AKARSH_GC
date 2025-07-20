@@ -1,22 +1,23 @@
 import * as React from 'react';
-import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 
 export default function BasicTimeline() {
   return (
    <>
-   <Timeline lineColor={'#ddd'}>
-   <TimelineItem
-    key="002"
-    dateText="Jan/2021-Feb/2023"
-    dateInnerStyle={{ background: '#081552', color: 'white' }}
-    bodyContainerStyle={{
-    // background: '#ddd',
-    color:'white',
-    border:'1px solid white',
-    padding: '20px',
-    borderRadius: '8px'
-  }}
+   <VerticalTimeline lineColor={'#ddd'}>
+   <VerticalTimelineElement
+    className="vertical-timeline-element--work"
+    date="Jan/2021-Feb/2023"
+    dateClassName="custom-date"
+    iconStyle={{ background: '#081552', color: '#fff' }}
+    contentStyle={{
+      background: 'transparent',
+      color:'white',
+      border:'1px solid white',
+      borderRadius: '8px'
+    }}
   >
     <h3 style={{marginBottom:'5px' }}><a style={{textDecoration:'none',backgroundColor:'none',color:'#007cc3'}} href='https://www.infosys.com/'target="_blank">Infosys LTD</a></h3>
     
@@ -30,19 +31,17 @@ export default function BasicTimeline() {
    
    
    </ul>
-  </TimelineItem>
-  <TimelineItem
-    key="002"
-    dateText="Mar/2023-Present"
-    dateInnerStyle={{ background: '#081552', color: 'white' }}
-    bodyContainerStyle={{
-      // background: '#ddd',
+  </VerticalTimelineElement>
+  <VerticalTimelineElement
+    className="vertical-timeline-element--work"
+    date="Mar/2023-Oct/2024"
+    dateClassName="custom-date"
+    iconStyle={{ background: '#081552', color: '#fff' }}
+    contentStyle={{
+      background: 'transparent',
       color:'white',
       border:'1px solid white',
-      padding: '20px',
-      borderRadius: '8px',
-      // boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
-  
+      borderRadius: '8px'
     }}
   >
     <h3 style={{marginBottom:'5px' }}><a style={{textDecoration:'none',backgroundColor:'none',color:'#6800e0'}} href='https://www.c5i.ai/'target="_blank">C5I LTD</a></h3>
@@ -53,9 +52,33 @@ export default function BasicTimeline() {
     <li>Created a chat application end to end with live chat options using WebSockets, featuring streaming animation, support for text, images, Excel files, and graphs. The application is fully responsive and built for Microsoft</li>
     <li>Delivered exceptional results for industry leaders like Microsoft, Estée Lauder, and Colgate</li>
     </ul>
-  </TimelineItem>
- 
-</Timeline>
+  </VerticalTimelineElement>
+ <VerticalTimelineElement
+    className="vertical-timeline-element--work"
+    date="Oct/2024-Present"
+    dateClassName="custom-date"
+    iconStyle={{ background: '#081552', color: '#fff' }}
+    contentStyle={{
+      background: 'transparent',
+      color:'white',
+      border:'1px solid white',
+      borderRadius: '8px'
+    }}
+  >
+    <h3 style={{marginBottom:'5px' }}><a style={{textDecoration:'none',backgroundColor:'none',color:'#007cc3'}} href='https://www.bestbuy.com/'target="_blank">BestBuy India</a></h3>
+    
+    
+   <ul className='jobdesc'>
+    <li>Worked on Customer and Agent facing Applications for Real-time communication using Twilio Voice, Chat and Video.</li>
+    <li>Integrated RESTful services for user authentication, session handling and message routing.</li>
+   <li>Contributed to CI/CD pipelines using GitHub Actions for seamless deployment. Monitored Applications performance, resolved
+memory-leaks issues in long running React components.</li>
+   <li>Followed TDD practices, wrote unit tests in Jest, RTL and contributed to integration test suites using Java – Selenium.</li>
+   
+   
+   </ul>
+  </VerticalTimelineElement>
+</VerticalTimeline>
    </>
   );
 }
